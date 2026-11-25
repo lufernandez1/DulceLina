@@ -1,0 +1,444 @@
+
+/* ESTILOS GENERALES */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #fcfaf5;
+    color: #493b32;
+    font-family: Georgia, "Times New Roman", serif;
+    line-height: 1.6;
+}
+
+/* BARRA DE NAVEGACIÓN */
+
+.header {
+    background-color: #bf4b78;
+    color: white;
+}
+
+.navbar {
+    max-width: 1400px;
+    margin: auto;
+    padding: 20px 35px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 32px;
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+}
+
+.nav-links {
+    display: flex;
+    gap: 35px;
+    list-style: none;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+}
+
+.nav-links a:hover {
+    text-decoration: underline;
+}
+
+/* TÍTULOS DE LAS SECCIONES */
+
+.titulo-seccion {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.subtitulo {
+    color: #b97870;
+    font-family: Arial, sans-serif;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 4px;
+    margin-bottom: 15px;
+}
+
+.titulo-seccion h1,
+.titulo-seccion h2 {
+    font-size: 56px;
+    font-weight: normal;
+    line-height: 1.2;
+    margin-bottom: 15px;
+}
+
+.titulo-seccion p:not(.subtitulo) {
+    font-size: 19px;
+    color: #745d46;
+}
+
+/* NUESTRA VITRINA */
+
+.vitrina {
+    max-width: 1400px;
+    margin: auto;
+    padding: 80px 35px;
+}
+
+/* PRODUCTOS */
+
+.productos-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 40px;
+}
+
+.producto {
+    min-width: 0;
+    padding-bottom: 25px;
+}
+
+.producto-imagen {
+    width: 100%;
+    height: 380px;
+    overflow: hidden;
+}
+
+.producto-imagen img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.producto .categoria {
+    font-family: Arial, sans-serif;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    color: #b97870;
+    margin-top: 20px;
+}
+
+.producto h2 {
+    font-size: 30px;
+    font-weight: normal;
+    margin: 8px 0;
+}
+
+.producto p {
+    margin-bottom: 10px;
+}
+
+.producto a {
+    color: #bf4b78;
+}
+
+/* SECCIÓN DE PEDIDOS */
+
+.pedido {
+    background-color: #f3e6df;
+    padding: 80px 30px;
+}
+
+.contacto-pedido {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    max-width: 1000px;
+    margin: auto;
+}
+
+.contacto-card {
+    background-color: white;
+    padding: 35px;
+    text-align: center;
+    flex: 1;
+    min-width: 250px;
+    border-radius: 8px;
+}
+
+.contacto-card h3 {
+    font-size: 26px;
+    margin-bottom: 15px;
+}
+
+.contacto-card p {
+    margin-bottom: 15px;
+}
+
+.contacto-card a {
+    color: #bf4b78;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+/* SECCIÓN DE CONTACTO */
+
+.contacto {
+    padding: 80px 25px;
+}
+
+.formulario {
+    max-width: 650px;
+    margin: auto;
+}
+
+.campo {
+    margin-bottom: 20px;
+}
+
+.campo label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+.campo input,
+.campo textarea {
+    width: 100%;
+    padding: 14px;
+    border: 1px solid #d8c8bd;
+    border-radius: 5px;
+    background-color: white;
+    font-family: Arial, sans-serif;
+    font-size: 15px;
+}
+
+.campo textarea {
+    resize: vertical;
+}
+
+.formulario button {
+    width: 100%;
+    background-color: #bf4b78;
+    color: white;
+    border: none;
+    padding: 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.formulario button:hover {
+    background-color: #99385e;
+}
+
+/* PIE DE PÁGINA */
+
+.footer {
+    background-color: #bf4b78;
+    color: white;
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.footer h3 {
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+.copyright {
+    font-size: 13px;
+    margin-top: 20px;
+}
+
+/* =========================================
+   NUEVAS FUNCIONES DE JAVASCRIPT
+========================================= */
+
+/* Buscador y filtros */
+
+.herramientas {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    margin: 30px auto;
+    padding: 15px;
+}
+
+.herramientas input,
+.herramientas select {
+    padding: 12px 16px;
+    border: 1px solid #d8c8bd;
+    border-radius: 6px;
+    background-color: white;
+    font-size: 15px;
+    max-width: 100%;
+}
+
+#cotizacion {
+    width: 100%;
+    text-align: center;
+    font-size: 14px;
+    color: #745d46;
+}
+
+#sin-resultados {
+    text-align: center;
+    padding: 20px;
+}
+
+/* Precios */
+
+.precio {
+    font-size: 22px;
+    font-weight: bold;
+    color: #49372b;
+}
+
+.precio-usd {
+    font-size: 14px;
+    color: #777;
+}
+
+/* Botones */
+
+.boton-js,
+#vaciar-carrito,
+.fila-carrito button {
+    background-color: #bf4b78;
+    color: white;
+    border: none;
+    padding: 12px 18px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 10px;
+}
+
+.boton-js:hover,
+#vaciar-carrito:hover,
+.fila-carrito button:hover {
+    background-color: #99385e;
+}
+
+/* Carrito de compras */
+
+.carrito {
+    max-width: 850px;
+    margin: 50px auto;
+    padding: 30px;
+    background-color: white;
+    border: 1px solid #e2d5ca;
+    border-radius: 10px;
+}
+
+.carrito h2 {
+    font-size: 30px;
+    margin-bottom: 20px;
+    color: #49372b;
+}
+
+.fila-carrito {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    padding: 15px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.fila-carrito button {
+    padding: 6px 10px;
+    margin: 0;
+}
+
+.carrito > p {
+    margin-top: 20px;
+    font-size: 20px;
+}
+
+/* Validación del formulario */
+
+.error {
+    color: #b42318;
+    font-size: 13px;
+    display: block;
+    margin-top: 5px;
+}
+
+.invalido {
+    border: 2px solid #b42318 !important;
+}
+
+#resultado-formulario {
+    color: #287a46;
+    font-weight: bold;
+    margin-top: 15px;
+}
+
+/* Adaptación para celulares */
+
+@media (max-width: 768px) {
+
+    .navbar {
+        flex-direction: column;
+        gap: 15px;
+        padding: 20px;
+    }
+
+    .nav-links {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .titulo-seccion h1,
+    .titulo-seccion h2 {
+        font-size: 38px;
+    }
+
+    .vitrina {
+        padding: 50px 20px;
+    }
+
+    .productos-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .producto-imagen {
+        height: 320px;
+    }
+
+    .herramientas {
+        flex-direction: column;
+    }
+
+    .herramientas input,
+    .herramientas select {
+        width: 100%;
+    }
+
+    .carrito {
+        margin: 30px 0;
+        padding: 20px;
+    }
+
+    .fila-carrito {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .contacto-pedido {
+        flex-direction: column;
+    }
+}

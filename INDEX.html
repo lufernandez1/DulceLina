@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DulceLina | Pastelería artesanal</title>
+    <link rel="icon" href="IMG/favicon.png.png">
+    <link rel="stylesheet" href="CSS/trabajofinal.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+
+    <header class="header">
+        <nav class="navbar">
+            <a href="#inicio" class="logo">DulceLina</a>
+
+            <ul class="nav-links">
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#productos">Productos</a></li>
+                <li><a href="#carrito">Mi pedido</a></li>
+                <li><a href="#pedido">Hacé tu pedido</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+
+        <section class="vitrina" id="inicio">
+
+            <div class="titulo-seccion">
+                <p class="subtitulo">NUESTRA VITRINA</p>
+                <h1>Delicias artesanales</h1>
+                <p>Elaboradas con amor, dedicación y los mejores ingredientes.</p>
+            </div>
+
+            <!-- Buscador y filtros -->
+
+            <div class="herramientas">
+
+                <input type="search"
+                       id="buscador"
+                       placeholder="Buscar productos..."
+                       aria-label="Buscar productos">
+
+                <select id="filtro" aria-label="Filtrar por categoría">
+                    <option value="todos">Todos los productos</option>
+                    <option value="panaderia">Panadería</option>
+                    <option value="pasteleria">Pastelería</option>
+                </select>
+
+                <p id="cotizacion">Cargando cotización del dólar...</p>
+
+            </div>
+
+            <!-- Productos generados desde JavaScript -->
+
+            <div class="productos-grid" id="productos"></div>
+
+            <p id="sin-resultados" hidden>
+                No se encontraron productos.
+            </p>
+
+            <!-- Carrito de compras -->
+
+            <section class="carrito" id="carrito">
+
+                <h2>Mi pedido</h2>
+
+                <div id="lista-carrito"></div>
+
+                <p>
+                    <strong>Total:</strong>
+                    <span id="total-carrito">$ 0</span>
+                </p>
+
+                <button type="button" id="vaciar-carrito" class="boton-js">
+                    Vaciar carrito
+                </button>
+
+                <button type="button" id="finalizar-compra" class="boton-js">
+                    Finalizar compra
+                </button>
+
+                <p id="confirmacion-compra" aria-live="polite"></p>
+
+            </section>
+
+        </section>
+
+        <!-- Sección de pedidos -->
+
+        <section class="pedido" id="pedido">
+
+            <div class="titulo-seccion">
+                <p class="subtitulo">HECHO CON AMOR</p>
+                <h2>Hacé tu pedido</h2>
+                <p>Disfrutá de nuestras delicias artesanales.</p>
+            </div>
+
+            <div class="contacto-pedido">
+
+                <div class="contacto-card">
+                    <h3>Pedidos personalizados</h3>
+                    <p>Consultanos por productos y pedidos especiales.</p>
+                    <a href="#contacto">Realizar consulta</a>
+                </div>
+
+                <div class="contacto-card">
+                    <h3>Comprá online</h3>
+                    <p>Elegí tus productos favoritos y armá tu pedido.</p>
+                    <a href="#productos">Ver productos</a>
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- Formulario de contacto -->
+
+        <section class="contacto" id="contacto">
+
+            <div class="titulo-seccion">
+                <p class="subtitulo">ESTAMOS PARA VOS</p>
+                <h2>Contacto</h2>
+                <p>Dejanos tu consulta.</p>
+            </div>
+
+            <form class="formulario" id="formulario" novalidate>
+
+                <div class="campo">
+                    <label for="nombre">Nombre</label>
+                    <input type="text" id="nombre" name="nombre">
+                    <span class="error" id="error-nombre"></span>
+                </div>
+
+                <div class="campo">
+                    <label for="email">Correo electrónico</label>
+                    <input type="email" id="email" name="email">
+                    <span class="error" id="error-email"></span>
+                </div>
+
+                <div class="campo">
+                    <label for="mensaje">Mensaje</label>
+                    <textarea id="mensaje" name="mensaje" rows="5"></textarea>
+                    <span class="error" id="error-mensaje"></span>
+                </div>
+
+                <button type="submit">Enviar consulta</button>
+
+                <p id="resultado-formulario" aria-live="polite"></p>
+
+            </form>
+
+        </section>
+
+    </main>
+
+    <footer class="footer">
+
+        <div class="footer-contenido">
+            <h3>DulceLina</h3>
+            <p>Pastelería artesanal | Rafaela, Santa Fe.</p>
+            <p class="copyright">
+                &copy; 2026 DulceLina. Todos los derechos reservados.
+            </p>
+            <p>Proyecto educativo. Compras simuladas.</p>
+        </div>
+
+    </footer>
+
+</body>
+</html>
